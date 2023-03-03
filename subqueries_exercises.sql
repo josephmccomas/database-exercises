@@ -37,7 +37,7 @@ from employees e
 where e.gender = 'F' and e.emp_no in (
     select dm2.emp_no
     from dept_manager dm2
-    where dm2.to_date = '999-01-01')
+    where dm2.to_date = '999-01-01');
 
 # Find all the department names that currently have female managers
 
@@ -56,7 +56,7 @@ select dm2.dept_no
 from dept_manager dm2
     join employees e2 on dm2.emp_no = e2.emp_no
 where dm2.to_date >current_date
-and e2.gender = 'F')
+and e2.gender = 'F');
 
 # Find the first and last name of the employee with the highest salary
 
